@@ -207,27 +207,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 68223067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c64563da6a79a9f43a4eae2dc0ca2131, type: 3}
+  m_Script: {fileID: 11500000, guid: efb96d5ffc8f328448d5502bad78645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
-  jumpForce: 2.5
-  groundCheck: {fileID: 1536549878}
-  groundedLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  groundCheckBaridus: 0.025
-  _isGrounded: 1
-  jumpsWanted: 1
-  traps: {fileID: 0}
-  minX: 0
-  maxX: 0
-  waitingTime: 2
-  espada: {fileID: 0}
-  bow: {fileID: 0}
-  _Walk: {fileID: 0}
-  _Jump: {fileID: 0}
-  _Attack: {fileID: 0}
+--- !u!114 &68223069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68223067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8275e13816d63f444932af32c0b1fb46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  strength: 1
+  speed: 3
+  luck: 1
+  defense: 1
+  score: 1
 --- !u!1 &313523428
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &313523429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -293,7 +294,7 @@ MonoBehaviour:
   speakSound: {fileID: 0}
   dialoguePanel: {fileID: 1053458136}
   _Trigger: {fileID: 313523428}
-  _Player: {fileID: 68223068}
+  _Player: {fileID: 0}
   _InstructionPressE: {fileID: 7648170740385801630, guid: 77dc32dbb24197f42af55d53c417c5a0, type: 3}
   _PositionPreesE: {fileID: 2064234038}
 --- !u!4 &313523431
@@ -325,7 +326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &330654595
 Transform:
   m_ObjectHideFlags: 0
@@ -1064,7 +1065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &512157556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3326,7 +3327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &926841233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3468,7 +3469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1041891895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4088,7 +4089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1068605801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5423,7 +5424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2060780777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5537,7 +5538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcf8aca6043d2440b8586ac8b00d1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 1570958551}
+  player: {fileID: 0}
   pausePanel: {fileID: 6426441015030335009}
   pauseBtns: {fileID: 1521010184541461870}
   slotsBtns: {fileID: 798616422780765581}
@@ -8310,11 +8311,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807763095816706564, guid: fcfe363f90917154f8d88527590c2243, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.403698
+      value: -13.417347
       objectReference: {fileID: 0}
     - target: {fileID: 8807763095816706564, guid: fcfe363f90917154f8d88527590c2243, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54099774
+      value: -0.5343597
       objectReference: {fileID: 0}
     - target: {fileID: 8807763095816706565, guid: fcfe363f90917154f8d88527590c2243, type: 3}
       propertyPath: orthographic size
@@ -8377,7 +8378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 6887177691644398850, guid: 632e23d8ef5472645ac015200f51b453, type: 3}
   audioManager: {fileID: 0}
-  saveAndLoad: {fileID: 0}
 --- !u!224 &8814501169375924591
 RectTransform:
   m_ObjectHideFlags: 0

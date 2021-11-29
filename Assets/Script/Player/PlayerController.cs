@@ -7,18 +7,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 1;
     private Rigidbody2D _body;
     private Animator _animator;
+    private Player player;
 
     private Vector2 _movement;
     private bool facingRight = true;
-    private float counter = 0;
 
     private bool atacking = false;
 
     void Awake()
     {
+        player = GetComponent<Player>();
         _body = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
     }
@@ -26,17 +26,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.tag == "Door")
-        {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                _animator.SetTrigger("Enter");
-            }
-        }
     }
 
     // Update is called once per frame
@@ -57,19 +46,20 @@ public class PlayerController : MonoBehaviour
             flip();
         }
 
-        if (_movement == Vector2.zero && !atacking)
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            counter += 1 * Time.deltaTime;
+            player.SavePlayer();
         }
-        else
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            counter = 0;
+            player.LoadPlayer();
         }
     }
 
     private void FixedUpdate()
     {
-        float horizontalVelocity = _movement.normalized.x * speed;
+        float horizontalVelocity = _movement.normalized.x * player.speed;
         _body.velocity = new Vector2(horizontalVelocity, _body.velocity.y);
     }
     private void LateUpdate()
