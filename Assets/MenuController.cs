@@ -53,9 +53,10 @@ public class MenuController : MonoBehaviour
     }
     public void credits()
     {
+        Title.gameObject.SetActive(false);
         foreach (GameObject b in buttons)
         {
-            if (b.name == "Load Buttons")
+            if (b.name == "Credits")
                 b.SetActive(true);
             else
                 b.SetActive(false);
@@ -64,6 +65,7 @@ public class MenuController : MonoBehaviour
 
     public void Back()
     {
+        Title.gameObject.SetActive(true);
         Title.position = titlePosition;
         foreach (GameObject b in buttons)
         {
