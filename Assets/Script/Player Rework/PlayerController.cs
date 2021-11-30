@@ -45,16 +45,6 @@ public class PlayerController : MonoBehaviour
         {
             flip();
         }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            player.SavePlayer();
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            player.LoadPlayer();
-        }
     }
 
     private void FixedUpdate()

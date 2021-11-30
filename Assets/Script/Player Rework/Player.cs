@@ -12,14 +12,9 @@ public class Player : MonoBehaviour
     public int defense;
     public int score;
 
-	public void SavePlayer()
-    {
-		SaveSystem.SavePlayer(this);
-    }
 
-	public void LoadPlayer()
+	public void LoadPlayer(PlayerData pd)
 	{
-		PlayerData pd = SaveSystem.LoadPlayer();
 		maxHealth = pd.MaxHealth;
 		currentHealth = pd.CurrentHealth;
 		strength = pd.Strength;
@@ -41,7 +36,7 @@ public class Player : MonoBehaviour
 		{
 			currentHealth = maxHealth;
 		}
-		Debug.Log("Player got some life. His current health is " + currentHealth);
+		Debug.Log("Player got some life. Now, his health is " + currentHealth);
 	}
 
 
