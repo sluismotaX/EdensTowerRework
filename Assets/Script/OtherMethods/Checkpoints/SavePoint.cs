@@ -11,10 +11,7 @@ public class SavePoint : MonoBehaviour
 
     private void Update()
     {
-        if (_Player.GetComponent<PlayerHealth>().getCurrentHealth() == 0)
-        {
-            _HUD.SetActive(true);
-        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,10 +19,7 @@ public class SavePoint : MonoBehaviour
         {
             if(collision.gameObject.CompareTag("Player"))
             {
-                if (collision.gameObject.GetComponent<PlayerHealth>().getCurrentHealth() > 0)
-                {
-                    collision.gameObject.transform.position = _TriggerEffect.transform.position;
-                }
+
             }  
         }
     }

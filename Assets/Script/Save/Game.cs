@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Game : MonoBehaviour
@@ -9,7 +10,7 @@ public class Game : MonoBehaviour
     public Player player;
     public Difficulty difficulty;
     public int progress;
-
+    public string currentScene;
     public int timeElapsed;
     public DateTime lastPlayed;
     public Boolean isPaused;
@@ -27,6 +28,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         lastPlayed = DateTime.Now;
+        currentScene = SceneManager.GetActiveScene().name;
         StartCoroutine(UpdateTimer());
     }
 

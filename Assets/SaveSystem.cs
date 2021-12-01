@@ -1,4 +1,4 @@
-
+using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -35,5 +35,27 @@ public static class SaveSystem
             Debug.LogError("No existe la partida #" + GameID.ToString());
             return null;
         }
+    }
+
+    private static string getGamePath(int gameId)
+    {
+        return Application.persistentDataPath + "/Games/" + gameId.ToString() + ".edenstower";
+    }
+
+
+    public static List<GameData> getAllGames()
+    {
+        List<GameData> games = new List<GameData>();
+        for(int i = 0; i < 3; i++)
+        {
+            string path = getGamePath(i);
+            if (File.Exists(path))
+            {
+                games.Add(LoadGame(i));
+            }
+            else
+                break;
+        }
+        return games;
     }
 }

@@ -22,8 +22,6 @@ public class FullHP : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            totalHP -= collision.GetComponent<PlayerHealth>().getCurrentHealth();
-            collision.GetComponent<PlayerHealth>().setHealth(totalHP);
             Destroy(gameObject);
         }
     }

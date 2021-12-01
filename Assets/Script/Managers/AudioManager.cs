@@ -82,10 +82,7 @@ public class AudioManager : MonoBehaviour
     {
         if (GameManager.instance)
         {
-            GameObject.FindGameObjectWithTag("BGM").GetComponent<AudioSource>().enabled = GameManager.instance.saveData.bgmEnabled;
-            GameObject.FindGameObjectWithTag("BGM").GetComponent<AudioSource>().volume = GameManager.instance.saveData.bgmLvl * 0.01f;
-            GameObject.FindGameObjectWithTag("SE").GetComponent<AudioSource>().enabled = GameManager.instance.saveData.seEnabled;
-            GameObject.FindGameObjectWithTag("SE").GetComponent<AudioSource>().volume = GameManager.instance.saveData.seLvl * 0.01f;
+
         }
         
     }

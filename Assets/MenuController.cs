@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
@@ -9,9 +10,14 @@ public class MenuController : MonoBehaviour
 {
     public Transform Title;
     public GameObject[] buttons;
+    private List<GameData> userGames;
     private GameObject last;
 
     private Vector3 titlePosition;
+    void Awake()
+    {
+        userGames = SaveSystem.getAllGames();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -76,9 +82,33 @@ public class MenuController : MonoBehaviour
         }
     }
 
-
+    public void Resume()
+    {
+        GameData last = lastPlayedGame();
+    }
     public void exit()
     {
         Application.Quit();
     }
+
+    private GameData lastPlayedGame()
+    {
+        DateTime min = DateTime.MaxValue;
+        GameData mindata = null;
+        foreach (GameData gd in userGames)
+        {
+            if (gd.LastPlayed < min)
+            {
+                min = gd.LastPlayed;
+                mindata = gd;
+            }
+        }
+        return mindata;
+    }
+
+    public int getGamesCount()
+    {
+        return userGames.Count;
+    }
+
 }

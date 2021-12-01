@@ -8,15 +8,14 @@ public class LoadScript : MonoBehaviour
     public GameObject resumeButton;
     public GameObject classicButtons;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        Transform Transform1 = classicButtons.GetComponent<Transform>();
-        if (isPlayed)
+        if(gameObject.GetComponentInParent<MenuController>().getGamesCount() > 0)
         {
             resumeButton.SetActive(true);
-            Transform1.position = new Vector3(transform.position.x,transform.position.y - 50,transform.position.z);
-
+            classicButtons.transform.position = new Vector3(transform.position.x,transform.position.y - 50,transform.position.z);
         }
         else
         {

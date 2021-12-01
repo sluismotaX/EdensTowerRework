@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &452733130
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &497598975
@@ -2650,7 +2650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9473ba923e05e45ac845390c6cd6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayed: 1
+  isPlayed: 0
   resumeButton: {fileID: 2105668393}
   classicButtons: {fileID: 1613612743}
 --- !u!1 &584661865
@@ -3584,7 +3584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &755054333
@@ -5520,7 +5520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &1037281788
@@ -5949,7 +5949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &1073660854
@@ -6663,7 +6663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &1175963610
@@ -8039,7 +8039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &1336238357
@@ -8538,7 +8538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &1521648681
@@ -9401,7 +9401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &1759316271
@@ -10054,7 +10054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47f91df2e8be84f871f66fc370a639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollingSpeed: 0.1
+  scrollingSpeed: 0.3
   currentTempSpeed: 0
   renderer: {fileID: 0}
 --- !u!64 &1892498179

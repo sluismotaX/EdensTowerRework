@@ -12,6 +12,7 @@ public class GameData
     private int progress;
     private int timeElapsed;
     private DateTime lastPlayed;
+    private string currentScene;
 
     public GameData(Game g)
     {
@@ -21,6 +22,7 @@ public class GameData
         progress = g.progress;
         timeElapsed = g.timeElapsed;
         lastPlayed = g.lastPlayed;
+        currentScene = g.currentScene;
     }
 
     public int GameID { get => gameID; set => gameID = value; }
@@ -29,4 +31,5 @@ public class GameData
     public int Progress { get => progress; set => progress = value; }
     public int TimeElapsed { get => timeElapsed; set => timeElapsed = value; }
     public DateTime LastPlayed { get => lastPlayed; set => lastPlayed = value; }
+    public string CurrentScene { get => currentScene; set => currentScene = value; }
 }

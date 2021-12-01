@@ -150,17 +150,7 @@ public class DialogManagerV2 : MonoBehaviour
 
         if (sentences.Count == 0)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                _bot.SetActive(true);
-                Destroy(NPC);
-                _Player.enableKeys(true);
-                foreach (GameObject c in TriggersDestroy){
-                    Destroy(c, 0);
-                }
-                Item coin = GameManager.instance.itemManagement.GetItemByTitle(ItemManagement.ItemAvailable.MagicStone);
-                GameManager.instance.saveData.playerData.AddItemToInventory(coin, 30);
-            }
+
         }
     }
 
